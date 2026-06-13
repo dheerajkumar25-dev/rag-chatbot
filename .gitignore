@@ -1,0 +1,8 @@
+rag-chatbot
+│
+├── .gitignore
+├── README.md
+├── app.py
+├── notes.pdf
+├── requirements.txt
+├── venv/
