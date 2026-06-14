@@ -1,69 +1,105 @@
-# RAG Chatbot with LangChain
+# AI Research Assistant using RAG
 
-A simple Retrieval-Augmented Generation (RAG) chatbot built using LangChain, FAISS, and HuggingFace embeddings.
-The chatbot reads a PDF document and answers user questions based only on the content of that document.
+An AI-powered Research Assistant built using Retrieval-Augmented Generation (RAG), FAISS Vector Database, HuggingFace Embeddings, Groq LLM, and Streamlit.
 
----
-
-## Features
-
-* Load PDF documents
-* Split text into chunks
-* Generate embeddings using HuggingFace
-* Store embeddings in FAISS vector database
-* Perform semantic similarity search
-* Answer questions from uploaded PDF
-* "Not found in document" handling
-* Beginner-friendly implementation
+The application allows users to upload PDF documents, generate academic-style abstracts, and ask intelligent questions based on document content using semantic search.
 
 ---
 
-## Tech Stack
+# Features
+
+* Upload any PDF document
+* Generate academic-style abstracts
+* Ask questions from uploaded PDF
+* Semantic similarity search using FAISS
+* HuggingFace embeddings for vector generation
+* Groq LLM integration for intelligent responses
+* Streamlit web interface
+* Secure API key handling using `.env`
+* Dynamic PDF processing
+
+---
+
+# Tech Stack
 
 * Python
+* Streamlit
 * LangChain
 * FAISS
 * HuggingFace Embeddings
 * Sentence Transformers
+* Groq API
 * PyPDF
-* VS Code
+* dotenv
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```bash
 rag-chatbot/
 │
 ├── app.py
-├── notes.pdf
+├── streamlit_app.py
 ├── README.md
 ├── requirements.txt
+├── .env
+├── .gitignore
+├── temp.pdf
 └── venv/
 ```
 
 ---
 
-## Installation
+# Project Workflow
 
-### 1. Clone Repository
+PDF Upload
+↓
+Text Extraction
+↓
+Chunking
+↓
+Embeddings Generation
+↓
+FAISS Vector Database
+↓
+Semantic Retrieval
+↓
+Groq LLM
+↓
+Abstract Generation / Question Answering
+
+---
+
+# Installation
+
+## Clone Repository
 
 ```bash
-git clone <your-github-repo-link>
+git clone https://github.com/dheerajkumar25-dev/rag-chatbot.git
+```
+
+---
+
+## Navigate to Project Folder
+
+```bash
 cd rag-chatbot
 ```
 
 ---
 
-### 2. Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate virtual environment:
+---
 
-#### Windows
+## Activate Virtual Environment
+
+### Windows
 
 ```bash
 venv\Scripts\activate
@@ -71,91 +107,71 @@ venv\Scripts\activate
 
 ---
 
-### 3. Install Dependencies
+## Install Dependencies
 
 ```bash
-pip install langchain
-pip install langchain-community
-pip install langchain-text-splitters
-pip install sentence-transformers
-pip install faiss-cpu
-pip install pypdf
+pip install -r requirements.txt
 ```
 
 ---
 
-## Add PDF
+# Setup Environment Variables
 
-Place your PDF file inside the project folder and rename it as:
+Create a `.env` file and add:
 
-```bash
-notes.pdf
+```env
+GROQ_API_KEY=your_groq_api_key
 ```
 
 ---
 
-## Run Project
+# Run Streamlit Application
 
 ```bash
-python app.py
+streamlit run streamlit_app.py
 ```
 
 ---
 
-## Sample Questions
+# Sample Questions
 
 * What is SQL?
 * Explain DBMS
-* What is primary key?
-* Explain joins
 * What is normalization?
+* Explain joins
+* What are primary keys?
 
 ---
 
-## How It Works
+# Core Concepts Used
 
-1. Load PDF using PyPDFLoader
-2. Split text into chunks
-3. Generate embeddings
-4. Store vectors in FAISS
-5. Retrieve relevant chunks
-6. Display answers from document
-
----
-
-## RAG Workflow
-
-```text
-PDF
- ↓
-Chunking
- ↓
-Embeddings
- ↓
-FAISS Vector Store
- ↓
-Semantic Retrieval
- ↓
-Answer Generation
-```
+* Retrieval-Augmented Generation (RAG)
+* Semantic Search
+* Vector Databases
+* Embeddings
+* Large Language Models (LLMs)
+* Prompt Engineering
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-* Streamlit UI
 * Multiple PDF support
-* Gemini/OpenAI integration
 * Chat history
-* Voice assistant
-* Better response formatting
+* Voice interaction
+* Cloud deployment
+* Dark mode UI
+* PDF highlighting
 
 ---
 
-## Author
+# Author
 
 Dheeraj Kumar
 
 * IIIT Bhagalpur
 * Electronics and Communication Engineering
 * MERN Stack & AI/ML Enthusiast
+
+GitHub:
+https://github.com/dheerajkumar25-dev
