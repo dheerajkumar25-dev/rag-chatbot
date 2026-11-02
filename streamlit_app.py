@@ -78,7 +78,7 @@ if uploaded_file is not None:
                 }
             ],
 
-            model="llama-3.1-8b-instant",
+            model="openai/gpt-oss-20b",
         )
         st.subheader("Abstract")
         st.write(abstract_response.choices[0].message.content)
@@ -113,8 +113,9 @@ if uploaded_file is not None:
                         "content": prompt,
                     }
                 ],
-                model="llama-3.1-8b-instant",
+                model="openai/gpt-oss-20b",
             )
             st.subheader("Answer")
             st.write(chat_completion.choices[0].message.content)
+
 
